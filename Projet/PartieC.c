@@ -194,7 +194,7 @@ int Ajout_Station_AVL(Arbre** A, int colonne_condition, long long valeur_conditi
                 if (strcmp(colonnes[0], "-") == 0){perror("Erreur du fichier, centrale non-existante");exit(1);}                                                                // Centrale == 0 // Erreur du .csv
                 else{                                                                                                                                                           // Centrale != 0
                     if (colonne_condition == 2){                                                                                                                                //On a une HVB
-                        if ((strcmp(colonnes[2], "-") == 0)&&(strcmp(colonnes[3], "-") == 0)){*capacite = atoll(colonnes[6]);}                                                  //HVB = 0 et LV = 0 // Une HVB seulement ou une sous-station ?
+                        if ((strcmp(colonnes[2], "-") == 0)&&(strcmp(colonnes[3], "-") == 0)){*capacite = atoll(colonnes[6]);}                                                  //HVA = 0 et LV = 0 // Une HVB seulement ou une sous-station ?
                         if ((strcmp(colonnes[2], "-") == 0)&&(strcmp(colonnes[3], "-") != 0)){perror("Erreur du fichier, sous-station LV mal raccordée");exit(2);}              //HVA = 0 et LV != 0 // Erreur du .csv
                     }
                     if (colonne_condition == 3){                                                                                                                                //On a une HVA

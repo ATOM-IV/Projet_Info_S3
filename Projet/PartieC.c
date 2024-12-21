@@ -192,7 +192,7 @@ int Ajout_Station_AVL(Arbre** A, int colonne_condition, long long valeur_conditi
                     if (colonne_condition == 4){                                                                                                                                //On a une LV
                         if ((strcmp(colonnes[1], "-") == 0)&&(strcmp(colonnes[2], "-") != 0)){*capacite = atoll(colonnes[6]);}                                                  //HVB != 0 et HVA != 0 // Une LV fonctionnelle ?
                         if ((strcmp(colonnes[1], "-") == 0)&&(strcmp(colonnes[2], "-") == 0)){perror("Erreur du fichier, sous-station LV mal raccordée");exit(4);}              //HVB = 0 et HVA = 0 // Erreur du .csv
-                        if ((strcmp(colonnes[1], "-") != 0)&&(strcmp(colonnes[2], "-") == 0)){perror("Erreur du fichier, sous-station LV mal raccordée");exit(4);}              //HVB = 0 et HVA = 0 // Erreur du .csv
+                        if ((strcmp(colonnes[1], "-") != 0)&&(strcmp(colonnes[2], "-") == 0)){perror("Erreur du fichier, sous-station LV mal raccordée");exit(4);}              //HVB != 0 et HVA = 0 // Erreur du .csv
                     }
                 }
             }
